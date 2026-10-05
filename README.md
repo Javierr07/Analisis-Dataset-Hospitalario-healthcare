@@ -91,7 +91,7 @@ SWITCH(
 )
 ```
 
-## Construccion del Dashboard.
+## 4. Construccion del Dashboard.
 El dashboard siguiete muestra los siguientes componentes.
 - Tabla en la que se muestra la reparticion de las hospitalizaciones que tienen desde 1 a 30 dias de estancia y la suma de la facturacion de todas las hospitalizaciones que tuvo esa estancia.
 - KPIs Facturacion total, Total hopitalizaciones, Facturacion media, Estancia media.
@@ -100,5 +100,52 @@ El dashboard siguiete muestra los siguientes componentes.
 - Grafico de linea que muestra la tendencia de las hospitalizaciones en cada años.
 
 <img width="1059" height="621" alt="image" src="https://github.com/user-attachments/assets/cbef1c9b-9af2-4473-a752-9b117e6081a4" />
+
+
+
+## 5. Hallazgos.
+
+### 5.1 Resultados del análisis.
+
+Después del proceso de limpieza y consolidación, el conjunto utilizado para el análisis contiene 50,000 hospitalizaciones.
+Los principales indicadores obtenidos fueron:
+- 50,000 hospitalizaciones.
+- 4966 registros con edad null realizado en la limpieza.
+- Aproximadamente $1.278 mil millones en importe facturado.
+- Facturación media cercana a $25.56 mil por hospitalización.
+- Estancia media de 15.5 días.
+- los años 2019 y 2024 tienen menos registros ya que solo hay da
+
+### 5.2 Hallasgoz Principales.
+
+Las hospitalizaciones presentan una distribución altamente uniforme entre las principales variables categóricas analizadas. No se identificaron concentraciones relevantes por tipo de admisión, condición médica, proveedor de seguros, género, medicamento o tipo de sangre.
+Al realizar segmentaciones adicionales entre estas variables, las proporciones se mantuvieron similares, sin observarse diferencias suficientemente grandes como para considerarlas patrones relevantes.
+
+La distribución por grupos de edad mostró aproximadamente 33 % de adultos, 29 % de adultos jóvenes y 27 % de adultos mayores. Cerca del 10 % quedó clasificado como edad desconocida debido a inconsistencias detectadas durante la limpieza.
+
+### 5.3 Limitaciones.
+
+El conjunto de datos utilizado es sintético y presenta distribuciones altamente uniformes entre numerosas variables. Por esta razón, no se identificaron relaciones suficientemente fuertes como para formular conclusiones sobre comportamientos hospitalarios reales.
+Además, el dataset no dispone de un identificador único de paciente o encuentro, por lo que los registros fueron interpretados como hospitalizaciones y no como pacientes únicos.
+
+### Conclusion
+
+El análisis exploratorio no identificó diferencias relevantes entre las principales categorías del conjunto de datos. Las hospitalizaciones permanecieron ampliamente equilibradas al segmentarlas por tipo de admisión, condición médica, proveedor de seguros, género, medicamento y otras características.
+Las métricas de facturación y duración de estancia también mostraron comportamientos similares entre los segmentos analizados. El análisis estadístico de la estancia reveló además una distribución aproximadamente uniforme entre 1 y 30 días.
+Estos resultados sugieren que la uniformidad observada está relacionada con la naturaleza sintética del conjunto de datos, por lo que no existe evidencia suficiente para plantear recomendaciones operativas o clínicas basadas en diferencias entre grupos.
+El principal valor del proyecto se encuentra, por tanto, en el proceso analítico completo: detección y tratamiento de inconsistencias, transformación de datos, modelado dimensional, creación de métricas, análisis exploratorio y validación de posibles patrones antes de formular conclusiones.
+
+## 6. Retos.
+en la construccion del este proyecto de analisis se presentaron retos los cuales me ayudaron mucho a mejorar mi analisis y tambien mi habilidad tecnica.}
+- investigacion para encontrar los datos duplicados y en manejo correcto de estos datos.
+- Crear el modelado estrella a partir de una tabla como lo fue este dataset.
+- Crear las dimensiones y las diferentes uniones y relaciones entre las dimensiones y la tabla de hechos.
+- las KPIs que nos ayuden a tener analisis mas preciso.
+- Investigacion que respalde las conclusiones.
+
+
+## 7. Dashboard
+Archivo del proyecto en Power BI
+[Analisis healthcare.zip](https://github.com/user-attachments/files/33070506/Analisis.healthcare.zip)
 
 
