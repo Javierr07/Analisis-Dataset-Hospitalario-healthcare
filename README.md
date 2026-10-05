@@ -10,3 +10,37 @@ Analizar los registros de hospitalización para identificar patrones en los cost
 - Power Query: limpieza y transformación.
 - Power BI y DAX: modelado, métricas y visualización.
 
+## obtencion de datos
+
+## 5 Metodologia
+
+## 1 Limpieza y Transformacion de datos con Power Query.
+
+### 1.1 Tipos de Datos
+Correjimos los tipos de datos que power query de esta forma tenemos calculos mas precisos al momento de analizar.
+<img width="1250" height="628" alt="image" src="https://github.com/user-attachments/assets/a88270e4-5d79-4d29-a7cc-66a50b53466e" />
+
+### 1.2 Manejo de Duplicados.
+en la exploracion de los datos encontramos que muchos registros son duplicados y que muchos de ellos la unica diferencia es la Edad del paciente, de esta forma llegmos a la conclusion que teniamos datos diplicados y datos duplicados que nos dan inconsistencia en la edad del paciente, el resultado fue que 534 registros estan duplicados exactamnete igual y que 4,436 registros eran duplicados y su inica diferencia es la edad, dandonos un total de 5,000 registros duplicados.
+
+La imagen siguiente es una muestra de como los registros eran duplicados a escepcion de la edad.
+
+La forma en la que tratamos estos datos fue filtrando los datos duplicados a 1 registro y los que tenian diferencia en la edad se utilizo solo un registro y debido a que no se tenia certeza en la edad decidimos dejarla null y esperar una correcion en el daro erroneo.
+<img width="1118" height="188" alt="image" src="https://github.com/user-attachments/assets/1c6a669e-8afc-4a58-a464-eed43ad9bc63" />
+
+## 2 Modelado de Datos
+
+En la investigacion para el modela de datos descubrimos que par aun total de 50000 registros de hospitalizaciones los hospitales que se utilizaron fueron 39876 por lo que este hallazgo nos limita a realizar analisis mas detallados con respecto a los hospitales ya que los registros estan muy dispersos en la cantidad de hopitales rewgistrados.
+
+<img width="515" height="246" alt="image" src="https://github.com/user-attachments/assets/233b3c1c-0b0d-4eed-8ded-2d9cde2b41fd" />
+
+
+Realizamos el modelado estrella usando la tabla de hechos FactHospitalizacones, y las diferentes dimensiones y sus respectivas relaciones lo que nos ayudara a tener un analisis mas optimizado ordenado, y agregamos la Dimension Fecha la cual nos ayudara a tener un analisis mas preciso con respecto al tiempo.
+<img width="808" height="605" alt="image" src="https://github.com/user-attachments/assets/4028a6e2-c261-4e28-b94d-9d0ae7892141" />
+
+  
+
+
+
+
+
