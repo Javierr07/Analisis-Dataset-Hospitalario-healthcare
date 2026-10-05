@@ -10,7 +10,9 @@ Analizar los registros de hospitalización para identificar patrones en los cost
 - Power Query: limpieza y transformación.
 - Power BI y DAX: modelado, métricas y visualización.
 
-## obtencion de datos
+## 4 Fuente de Datos
+Kaggle
+https://www.kaggle.com/datasets/prasad22/healthcare-dataset
 
 ## 5 Metodologia
 
