@@ -46,7 +46,10 @@ las KPIs utilizadas para el analisis son las siguientes.
 - Total de Hospitalizacion.
   cuenta el total de los registros.
 
-  Total Hospitalizaciones = COUNTROWS(FactHospitalizaciones)
+```DAX
+Total Hospitalizaciones =
+COUNTROWS(FactHospitalizaciones)
+```
   
 - Total de Facturacion.
   Suma la facturacion de cada registro.
