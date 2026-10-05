@@ -10,13 +10,13 @@ Analizar los registros de hospitalización para identificar patrones en los cost
 - Power Query: limpieza y transformación.
 - Power BI y DAX: modelado, métricas y visualización.
 
-## 4 Fuente de Datos
+## 4. Fuente de Datos
 Kaggle
 https://www.kaggle.com/datasets/prasad22/healthcare-dataset
 
-## 5 Metodologia
+## 5. Metodologia
 
-## 1 Limpieza y Transformacion de datos con Power Query.
+## 1. Limpieza y Transformacion de datos con Power Query.
 
 ### 1.1 Tipos de Datos
 Correjimos los tipos de datos que power query de esta forma tenemos calculos mas precisos al momento de analizar.
@@ -30,7 +30,7 @@ La imagen siguiente es una muestra de como los registros eran duplicados a escep
 La forma en la que tratamos estos datos fue filtrando los datos duplicados a 1 registro y los que tenian diferencia en la edad se utilizo solo un registro y debido a que no se tenia certeza en la edad decidimos dejarla null y esperar una correcion en el daro erroneo.
 <img width="1118" height="188" alt="image" src="https://github.com/user-attachments/assets/1c6a669e-8afc-4a58-a464-eed43ad9bc63" />
 
-## 2 Modelado de Datos
+## 2. Modelado de Datos
 
 En la investigacion para el modela de datos descubrimos que par aun total de 50000 registros de hospitalizaciones los hospitales que se utilizaron fueron 39876 por lo que este hallazgo nos limita a realizar analisis mas detallados con respecto a los hospitales ya que los registros estan muy dispersos en la cantidad de hopitales rewgistrados.
 
@@ -40,9 +40,46 @@ En la investigacion para el modela de datos descubrimos que par aun total de 500
 Realizamos el modelado estrella usando la tabla de hechos FactHospitalizacones, y las diferentes dimensiones y sus respectivas relaciones lo que nos ayudara a tener un analisis mas optimizado ordenado, y agregamos la Dimension Fecha la cual nos ayudara a tener un analisis mas preciso con respecto al tiempo.
 <img width="808" height="605" alt="image" src="https://github.com/user-attachments/assets/4028a6e2-c261-4e28-b94d-9d0ae7892141" />
 
+## 3. Definición de métricas con DAX.
+las KPIs utilizadas para el analisis son las siguientes.
+
+- Total de Hospitalizacion.
+  cuenta el total de los registros.
+
+  Total Hospitalizaciones = COUNTROWS(FactHospitalizaciones)
   
+- Total de Facturacion.
+  Suma la facturacion de cada registro.
 
+  Facturacion Total = SUM(FactHospitalizaciones[Billing Amount])
 
+  
+- Facturacion media.
+  se suma el total de la facturacion y se divide entre el total de registros.
 
+  facturacion media = 
+    DIVIDE(
+    [Facturacion Total],
+    [Total Hospitalizaciones])
+  
+- Dias promedios de estancia.
+  Suma los dias de estancia de cada hospitalizacion y los divide entre el total de registros.
+  Estancia Media = AVERAGE(FactHospitalizaciones[Dias Estancia])
+  
+- Grupos de edades.
+Categorizamos las edades de los pacientes asi tenemos un mejor analisis.
+
+Grupo Edad = 
+SWITCH(
+    TRUE(),
+    ISBLANK(FactHospitalizaciones[Age]), "Edad desconocida",
+    FactHospitalizaciones[Age] < 18, "Niños y adolescentes",
+    FactHospitalizaciones[Age] < 40, "Adultos jóvenes",
+    FactHospitalizaciones[Age] < 65, "Adultos",
+    FactHospitalizaciones[Age] >= 65, "Adultos mayores",
+    "Edad desconocida"
+)
+
+## Construccion del Dashboard.
 
 
