@@ -92,5 +92,13 @@ SWITCH(
 ```
 
 ## Construccion del Dashboard.
+El dashboard siguiete muestra los siguientes componentes.
+- Tabla en la que se muestra la reparticion de las hospitalizaciones que tienen desde 1 a 30 dias de estancia y la suma de la facturacion de todas las hospitalizaciones que tuvo esa estancia.
+- KPIs Facturacion total, Total hopitalizaciones, Facturacion media, Estancia media.
+- Grafico de anillos el cual muestra la distribucion de los grupos de edad en el cual no tenemos los datos precisos debido a que el 10% de las hospitalizaciones no tienen edad y se han categorizado como edad desconocida.
+- Grafico Circular en el que vemos la dsitribucion de las hospitalizaciones pro tipo de admission.
+- Grafico de linea que muestra la tendencia de las hospitalizaciones en cada años.
+
+<img width="1059" height="621" alt="image" src="https://github.com/user-attachments/assets/cbef1c9b-9af2-4473-a752-9b117e6081a4" />
 
 
