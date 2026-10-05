@@ -23,7 +23,7 @@ Correjimos los tipos de datos que power query de esta forma tenemos calculos mas
 <img width="1250" height="628" alt="image" src="https://github.com/user-attachments/assets/a88270e4-5d79-4d29-a7cc-66a50b53466e" />
 
 ### 1.2 Manejo de Duplicados.
-en la exploracion de los datos encontramos que muchos registros son duplicados y que muchos de ellos la unica diferencia es la Edad del paciente, de esta forma llegmos a la conclusion que teniamos datos diplicados y datos duplicados que nos dan inconsistencia en la edad del paciente, el resultado fue que 534 registros estan duplicados exactamnete igual y que 4,436 registros eran duplicados y su inica diferencia es la edad, dandonos un total de 5,000 registros duplicados.
+en la exploracion de los datos encontramos que muchos registros son duplicados y que muchos de ellos la unica diferencia es la Edad del paciente, de esta forma llegmos a la conclusion que teniamos datos diplicados y datos duplicados que nos dan inconsistencia en la edad del paciente, el resultado fue que 534 registros estan duplicados exactamnete igual y que 4,936 registros eran duplicados y su inica diferencia es la edad, dandonos un total de 5,000 registros duplicados.
 
 La imagen siguiente es una muestra de como los registros eran duplicados a escepcion de la edad.
 
