@@ -53,25 +53,32 @@ COUNTROWS(FactHospitalizaciones)
   
 - Total de Facturacion.
   Suma la facturacion de cada registro.
-
-  Facturacion Total = SUM(FactHospitalizaciones[Billing Amount])
-
+```DAX
+Facturacion Total = SUM(FactHospitalizaciones[Billing Amount])
+```
   
 - Facturacion media.
   se suma el total de la facturacion y se divide entre el total de registros.
 
-  facturacion media = 
+
+```DAX
+facturacion media = 
     DIVIDE(
     [Facturacion Total],
     [Total Hospitalizaciones])
+```
   
 - Dias promedios de estancia.
   Suma los dias de estancia de cada hospitalizacion y los divide entre el total de registros.
-  Estancia Media = AVERAGE(FactHospitalizaciones[Dias Estancia])
+
+```DAX
+Estancia Media = AVERAGE(FactHospitalizaciones[Dias Estancia])
+```
   
 - Grupos de edades.
 Categorizamos las edades de los pacientes asi tenemos un mejor analisis.
 
+```DAX
 Grupo Edad = 
 SWITCH(
     TRUE(),
@@ -82,6 +89,7 @@ SWITCH(
     FactHospitalizaciones[Age] >= 65, "Adultos mayores",
     "Edad desconocida"
 )
+```
 
 ## Construccion del Dashboard.
 
