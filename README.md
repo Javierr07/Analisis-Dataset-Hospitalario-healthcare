@@ -22,7 +22,7 @@ https://www.kaggle.com/datasets/prasad22/healthcare-dataset
 Correjimos los tipos de datos que power query de esta forma tenemos calculos mas precisos al momento de analizar.
 <img width="1250" height="628" alt="image" src="https://github.com/user-attachments/assets/a88270e4-5d79-4d29-a7cc-66a50b53466e" />
 
-### 1.2 Manejo de Duplicados.
+### 1.2 Manejo de Duplicados
 
 Durante la busqueda de datos duplicados encontramos algo inreresante.
 - 534 registros duplicados.
@@ -33,7 +33,7 @@ Durante la busqueda de datos duplicados encontramos algo inreresante.
 La imagen siguiente es una muestra de como los registros eran duplicados a escepcion de la edad.
 <img width="1118" height="188" alt="image" src="https://github.com/user-attachments/assets/1c6a669e-8afc-4a58-a464-eed43ad9bc63" />
 
-## 2. Modelado de Datos.
+## 2. Modelado de Datos
 
 En la investigacion para el modela de datos descubrimos que para un total de 50000 registros de hospitalizaciones los hospitales que se utilizaron fueron 39876 por lo que este hallazgo nos limita a realizar analisis mas detallados con respecto a los hospitales ya que los registros estan muy dispersos en la cantidad de hopitales rewgistrados.
 
@@ -43,7 +43,7 @@ En la investigacion para el modela de datos descubrimos que para un total de 500
 Realizamos el modelado estrella definiendo la tabla de hechos FactHospitalizacones, y las diferentes dimensiones y sus respectivas relaciones lo que nos ayudara a tener un analisis mas optimizado y ordenado, y agregamos la Dimension Fecha la cual nos ayudara a tener un analisis mas preciso con respecto al tiempo.
 <img width="808" height="605" alt="image" src="https://github.com/user-attachments/assets/4028a6e2-c261-4e28-b94d-9d0ae7892141" />
 
-## 3. Definición de métricas con DAX.
+## 3. Definición de métricas con DAX
 las KPIs utilizadas para el analisis son las siguientes.
 
 - Total de Hospitalizacion.
@@ -92,7 +92,7 @@ SWITCH(
 )
 ```
 
-## 4. Construccion del Dashboard.
+## 4. Construccion del Dashboard
 El dashboard siguiete muestra los siguientes componentes.
 - Tabla en la que se muestra la reparticion de las hospitalizaciones que tienen desde 1 a 30 dias de estancia y la suma de la facturacion de todas las hospitalizaciones que tuvo esa estancia.
 - KPIs Facturacion total, Total hopitalizaciones, Facturacion media, Estancia media.
@@ -104,9 +104,9 @@ El dashboard siguiete muestra los siguientes componentes.
 
 
 
-## 5. Hallazgos.
+## 5. Hallazgos
 
-### 5.1 Resultados del análisis.
+### 5.1 Resultados del análisis
 
 Después del proceso de limpieza y consolidación, el conjunto utilizado para el análisis contiene 50,000 hospitalizaciones.
 Los principales indicadores obtenidos fueron:
@@ -117,15 +117,14 @@ Los principales indicadores obtenidos fueron:
 - Estancia media de 15.5 días.
 - Los años 2019 y 2024 tienen menos registros ya que solo hay datos parciales del año.
 
-### 5.2 Hallasgoz Principales.
+### 5.2 Hallasgoz Principales
 
 Las hospitalizaciones presentan una distribución altamente uniforme entre las principales variables categóricas analizadas. No se identificaron concentraciones relevantes por tipo de admisión, condición médica, proveedor de seguros, género, medicamento o tipo de sangre.
 Al realizar segmentaciones adicionales entre estas variables, las proporciones se mantuvieron similares, sin observarse diferencias suficientemente grandes como para considerarlas patrones relevantes.
 
 La distribución por grupos de edad mostró aproximadamente 33 % de adultos, 29 % de adultos jóvenes y 27 % de adultos mayores. Cerca del 10 % quedó clasificado como edad desconocida debido a inconsistencias detectadas durante la limpieza.
 
-### 5.3 Limitaciones.
-
+### 5.3 Limitaciones
 El conjunto de datos utilizado es sintético y presenta distribuciones altamente uniformes entre numerosas variables. Por esta razón, no se identificaron relaciones suficientemente fuertes como para formular conclusiones sobre comportamientos hospitalarios reales.
 Además, el dataset no dispone de un identificador único de paciente o encuentro, por lo que los registros fueron interpretados como hospitalizaciones y no como pacientes únicos.
 
@@ -136,7 +135,7 @@ Las métricas de facturación y duración de estancia también mostraron comport
 Estos resultados sugieren que la uniformidad observada está relacionada con la naturaleza sintética del conjunto de datos, por lo que no existe evidencia suficiente para plantear recomendaciones operativas o clínicas basadas en diferencias entre grupos.
 El principal valor del proyecto se encuentra, por tanto, en el proceso analítico completo: detección y tratamiento de inconsistencias, transformación de datos, modelado dimensional, creación de métricas, análisis exploratorio y validación de posibles patrones antes de formular conclusiones.
 
-## 6. Retos.
+## 6. Retos
 en la construccion del este proyecto de analisis se presentaron retos los cuales me ayudaron mucho a mejorar mi analisis y tambien mi habilidad tecnica.
 - Investigacion para encontrar los datos duplicados y en manejo correcto de estos datos.
 - Crear el modelado estrella a partir de una tabla como lo fue este dataset.
