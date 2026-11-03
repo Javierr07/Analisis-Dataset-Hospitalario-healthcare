@@ -3,6 +3,11 @@
 ## 1. Descripción
 Seleccionamos el Dataset healthcare para realizar un analisis desde cero usando solo power BI como herramienta de trabajo, el enfoque es utilizar para limpieza, trasformacion e investigacion de datos Power query, Realizar el modelado de ser nesesario y mostrar los resultados de la investigacion y datos relevantes mediante los graficos BI.
 
+### Dashboard
+
+<img width="1059" height="621" alt="image" src="https://github.com/user-attachments/assets/4e1e1591-366e-41a0-b72d-98b08878a9b9" />
+
+
 ## 2. Objetivo
 Analizar los registros de hospitalización para identificar patrones en los costes médicos, la duración de las estancias y la distribución de los ingresos hospitalarios, con el propósito de aportar información útil para la planificación operativa.
 
